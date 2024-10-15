@@ -10,7 +10,7 @@
   <h1>Authorized! <span sec:authentication="name"></span>
   </h1>
   <a href="/logout">ログアウト</a>
-  
+
   小屋名を入力してください．その小屋に入室したユーザの一覧を表示します
   <form th:action="@{/sample4/step5}" method="post">
     <input type="text" name="chamberName" />
@@ -29,6 +29,11 @@
     </tr>
   </div>
   </p>
+
+  <p>
+    <a href="/sample4/step6">Sample4-6へGETで移動</a>
+  </p>
+
 </body>
 
 </html>
