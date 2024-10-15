@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import oit.is.team_8.db8.model.Chamber;
 import oit.is.team_8.db8.model.ChamberMapper;
-//import oit.is.team_8.db8.model.ChamberUser;
+import oit.is.team_8.db8.model.ChamberUser;
 //import oit.is.team_8.db8.model.UserInfo;
 
 @Controller
@@ -70,5 +70,13 @@ public class Sample41Controller {
     ArrayList<Chamber> chambers5 = chamberMapper.selectAllByChamberName(chamberName);
     model.addAttribute("chambers5", chambers5);
     return "sample45.html";
+  }
+
+  @GetMapping("step7")
+  @Transactional
+  public String sample47(ModelMap model) {
+    ArrayList<ChamberUser> chamberUsers7 = chamberMapper.selectAllChamberUser();
+    model.addAttribute("chamberUsers7", chamberUsers7);
+    return "sample46.html";
   }
 }
